@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test('POST new user to JSONPlaceholder', async ({ request }) => {
   const newUser = {
-    name: 'Jane Doe',
+    name: 'Jake Doe',
     username: 'janedoe',
     email: 'jane@example.com'
   };
