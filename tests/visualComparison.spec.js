@@ -16,7 +16,7 @@ test.beforeEach(async ({ page }) => {
 test('add product to cart - visual check using toHaveScreenshot()', async ({ page }) => {
 
   await homePage.goto();
-  await homePage.acceptCookies();
+  //await homePage.acceptCookies();
   await homePage.navigateToProducts();
   await productsPage.selectProduct(3);
   await productsPage.addToCart();
@@ -34,7 +34,7 @@ test('add product to cart - visual check with pre-uploaded screenshot', async ({
 
 
   await homePage.goto();
-  await homePage.acceptCookies();
+ // await homePage.acceptCookies();
   await homePage.navigateToProducts();
   await productsPage.selectProduct(3);
   await productsPage.addToCart();

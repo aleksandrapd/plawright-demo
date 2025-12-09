@@ -6,7 +6,7 @@ test('add product to card and proceed to checkout', async ({ page }) => {
   await page.goto('https://automationexercise.com/');
 
   //accept cookies
-  await page.getByRole('button', { name: 'Consent' }).click();
+  //await page.getByRole('button', { name: 'Consent' }).click();
 
   //select product and add to cart
   await page.getByRole('link', { name: 'Products' }).click();
@@ -25,7 +25,7 @@ test('add product to card and proceed to checkout', async ({ page }) => {
 
 test('create an account', async ({ page }) => {
   await page.goto('https://automationexercise.com/');
-  await page.getByRole('button', { name: 'Consent' }).click();
+  //await page.getByRole('button', { name: 'Consent' }).click();
   await page.getByRole('link', { name: 'Signup / Login' }).click();
   await page.locator('form').filter({ hasText: 'Login' }).getByPlaceholder('Email Address').fill('ivanka@ivankova.com');
   await page.getByRole('button', { name: 'Login' }).click();
