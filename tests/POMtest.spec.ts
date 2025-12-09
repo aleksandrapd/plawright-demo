@@ -1,17 +1,22 @@
-import { HomePage } from '../pages/homePage.ts';
-import { ProductsPage } from '../pages/productsPage.ts';
-import { CartPage } from '../pages/cartPage.ts';
+import { HomePage } from '../pages/homePage';
+import { ProductsPage } from '../pages/productsPage';
+import { CartPage } from '../pages/cartPage';
 import { test, expect } from '@playwright/test';
 
+let homePage: HomePage;
+let productsPage: ProductsPage;
+let cartPage: CartPage;
 
+test.beforeEach(async ({ page }) => {
+  homePage = new HomePage(page);
+  productsPage = new ProductsPage(page);
+  cartPage = new CartPage(page);
+});
 
-test('add product to cart using POM', async ({ page }) => {
-  const homePage = new HomePage(page);
-  const productsPage = new ProductsPage(page);
-  const cartPage = new CartPage(page);
+test.only('add product to cart using POM', async ({ page }) => {
 
   await homePage.goto();
-  await homePage.acceptCookies();
+  //await homePage.acceptCookies();
   await homePage.navigateToProducts();
 
   await productsPage.selectProduct(3); 

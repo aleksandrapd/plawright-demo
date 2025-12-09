@@ -23,8 +23,6 @@ test('add product to card and proceed to checkout', async ({ page }) => {
   
 });
 
-
-
 test('create an account', async ({ page }) => {
   await page.goto('https://automationexercise.com/');
   await page.getByRole('button', { name: 'Consent' }).click();

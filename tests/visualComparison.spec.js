@@ -13,7 +13,7 @@ test.beforeEach(async ({ page }) => {
   cartPage = new CartPage(page);
 });
 
-test('add product to cart - visual check using toHaveScreenshot()', async ({ page }) => {
+test.only('add product to cart - visual check using toHaveScreenshot()', async ({ page }) => {
 
   await homePage.goto();
   await homePage.acceptCookies();
@@ -30,7 +30,7 @@ test('add product to cart - visual check using toHaveScreenshot()', async ({ pag
 });
 
 
-test('add product to cart - visual check with pre-uploaded screenshot', async ({ page }) => {
+test.only('add product to cart - visual check with pre-uploaded screenshot', async ({ page }) => {
 
 
   await homePage.goto();
