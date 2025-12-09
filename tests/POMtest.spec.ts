@@ -13,7 +13,7 @@ test.beforeEach(async ({ page }) => {
   cartPage = new CartPage(page);
 });
 
-test.only('add product to cart using POM', async ({ page }) => {
+test('add product to cart using POM', async ({ page }) => {
 
   await homePage.goto();
   //await homePage.acceptCookies();
